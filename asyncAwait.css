@@ -1,0 +1,16 @@
+div {
+    padding: 5px 20px;
+}
+
+table {
+    padding: 0;
+    width: 80%;
+    margin: auto;
+    border: 3px solid black;
+}
+
+td, th {
+    padding: 0px 10px;
+    margin: 0;
+    border: 1px solid black;
+}

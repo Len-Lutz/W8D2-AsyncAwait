@@ -1,5 +1,8 @@
 // This function adds the passed in line to the screen
 function displayLine(text) {
+    // Send the text to the console
+    console.log(text);
+
     // initialize the list (table)
     let output = `<div>${text}</div>`;
     // send the line to the web page
@@ -19,7 +22,7 @@ function getRandomNumber() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             let num = Math.floor(Math.random() * 100);
-            console.log('Random Number = ' + num);
+            // console.log('Random Number = ' + num);
 
             if(num > 24) {
                 resolve(num);
@@ -29,6 +32,8 @@ function getRandomNumber() {
         }, 500);
     });
 }
+
+displayLine('<h2>Getting Random Numbers Between 25 and 100</h2>');
 
 getRandomNumber()
     .then(num => showNum(num, displayLine))
@@ -55,10 +60,8 @@ async function getLocation(city, callback) {
 
     let data = await response.json();
     if (data.longt != 0.00000) {
-        console.log(data);
         displayText = `For ${city}: Latitude = ${data.latt}, Longitude = ${data.longt}`;
     } else {
-        console.log(data);
         displayText = `Error retrieving data for "${city}": ${data.error.description.substring(3)}`;
     }
 

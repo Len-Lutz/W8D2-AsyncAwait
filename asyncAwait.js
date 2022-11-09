@@ -71,25 +71,24 @@ async function getLocation(city, callback) {
 // each of the following calls are delayed incrementally to keep calls in order
 // inform user what we are doing
 setTimeout(() => {
-    displayLine('<br><h2>Getting Locations for Cities<br>(Albuquerque, Abqueruer, Chicago, Sydney)</h2>')
-}, 3000);
-
-// call getLocation function with Albuquerque
-setTimeout(() => {
-    getLocation('Albuquerque', displayLine);
-}, 3500);
-
-// call getLocation function with Invalid Name
-setTimeout(() => {
-    getLocation('Abqueruer', displayLine);
-}, 4500);
+    displayLine('<br><h2>Getting Locations for Cities<br>(Chicago, Sydney, Albuquerque, Abqueruer)</h2>')
+}, 5000);
 
 // call getLocation function with Chicago
 setTimeout(() => {
     getLocation('Chicago', displayLine);
-}, 6500);
+}, 6000);
 
 // call getLocation function with Sydney
 setTimeout(() => {
     getLocation('Sydney', displayLine);
-}, 7500);
+}, 7000);
+// call getLocation function with Albuquerque
+setTimeout(() => {
+    getLocation('Albuquerque', displayLine);
+}, 8000);
+
+// call getLocation function with Invalid Name
+setTimeout(() => {
+    getLocation('Abqueruer', displayLine);
+}, 9000);

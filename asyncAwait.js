@@ -1,3 +1,5 @@
+const API_KEY = "4376409060303630461x97281";
+
 // This function adds the passed in line to the screen
 function displayLine(text) {
     // Send the text to the console
@@ -55,8 +57,8 @@ setTimeout(() => {
 
 // create an asynchronous function that gets the latitude and longitude for the passed in city
 async function getLocation(city, callback) {
-    let response = await fetch(`https://geocode.xyz/${city}?json=1&auth=4376409060303630461x97281`);
     let displayText = "";
+    let response = await fetch(`https://geocode.xyz/${city}?json=1&auth=${API_KEY}`);
 
     let data = await response.json();
     if (data.longt != 0.00000) {
